@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "extensionTemplate",
+    "description": "This is an extension template that show how to modify DOM from extension pop-up",
+    "version": "0.0.1",
+    "author": "Nathanaël Renaud <perso@renaudna.fr>",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "ressources/images/16.png",
+            "24": "ressources/images/24.png",
+            "32": "ressources/images/32.png",
+            "64": "ressources/images/64.png",
+            "128": "ressources/images/128.png"
+        },
+        "default_title": "extensionTemplate"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "ressources/images/16.png",
+        "24": "ressources/images/24.png",
+        "32": "ressources/images/32.png",
+        "64": "ressources/images/64.png",
+        "128": "ressources/images/128.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "declarativeContent"
+    ]
+}
